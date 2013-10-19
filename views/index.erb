@@ -1,0 +1,19 @@
+<!doctype>
+<html>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+  <canvas id="canvas" width="500" height="500">Canvas BITCH!</canvas>
+  <button id="save" data-url="save_drawing">Save</button>
+  <button id="clear">Clear</button>
+  <button id="restore">Restore</button>
+  <input type="color" id="colorPicker"></input>
+
+  <ul>
+    <% @drawings.each do |drawing| %>
+    <a href="/drawing/<%drawing.id %>">Drawing: <%= drawing.ed %></a>  
+    <% end %>
+  </ul>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</html>
